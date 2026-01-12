@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigg3rly Labs | Software Development House</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        
+        :root { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #000;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        .text-accent { color: #E11D48; }
+        .bg-accent { background-color: #E11D48; }
+        .glass { background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #E11D48; }
+
+        /* Responsive typography fixes */
+        .hero-title { font-size: clamp(2.5rem, 8vw, 6.5rem); }
+    </style>
+</head>
+<body class="text-zinc-300 antialiased">
+
+    <nav class="fixed top-0 w-full z-50 glass border-b border-zinc-900">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-black tracking-tighter text-white uppercase">BIGG3RLY<span class="text-accent">LABS</span></h1>
+            <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em]">
+                <a href="#work" class="hover:text-accent transition">Work</a>
+                <a href="#blog" class="hover:text-accent transition">Insights</a>
+                <a href="#contact" class="hover:text-accent transition">Contact</a>
+            </div>
+            <a href="https://wa.me/2349132720329?text=Hello%20Bigg3rly%20Labs!" 
+               class="bg-accent text-white px-5 py-2 rounded text-[10px] font-black uppercase tracking-widest hover:opacity-80 transition">
+               Quote
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative pt-44 pb-20 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <p class="text-accent font-mono tracking-[0.4em] text-[10px] uppercase mb-6">Engineering Digital Excellence</p>
+            <h2 class="hero-title font-black mb-8 leading-[0.9] tracking-tighter text-white uppercase">
+                Think <span class="italic text-zinc-700">Bigg3r.</span><br>Build Better.
+            </h2>
+            <p class="text-zinc-500 text-sm md:text-base mb-12 max-w-xl mx-auto leading-relaxed">
+                A Nigeria-based software house specializing in UI/UX and Full-Stack solutions for local and international innovators.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#work" class="border border-zinc-800 text-white px-8 py-3 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">Our Work</a>
+                <a href="#contact" class="bg-zinc-900 text-white px-8 py-3 rounded text-[10px] font-bold uppercase tracking-widest border border-zinc-800 hover:border-accent transition">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="work" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <h3 class="text-3xl font-black text-white uppercase tracking-tighter">Selected Projects</h3>
+                <p class="text-zinc-600 font-mono text-[10px] tracking-widest uppercase">/ Delivering Scalable Code</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <a href="https://asobridal.com" target="_blank" class="group block">
+                    <div class="aspect-video bg-zinc-900 rounded border border-zinc-800 overflow-hidden relative group-hover:border-accent/50 transition-all duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-2xl font-black text-zinc-800 group-hover:text-accent transition uppercase italic">AsoBridal</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="text-white text-xs font-bold uppercase tracking-widest">asobridal.com</h4>
+                        <p class="text-zinc-600 text-[10px] uppercase mt-1">Full-Stack • E-Commerce</p>
+                    </div>
+                </a>
+                <a href="https://burgerspot.ng" target="_blank" class="group block">
+                    <div class="aspect-video bg-zinc-900 rounded border border-zinc-800 overflow-hidden relative group-hover:border-accent/50 transition-all duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-2xl font-black text-zinc-800 group-hover:text-accent transition uppercase italic">BurgerSpot</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="text-white text-xs font-bold uppercase tracking-widest">burgerspot.ng</h4>
+                        <p class="text-zinc-600 text-[10px] uppercase mt-1">Custom Ordering System</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-24 px-6 bg-zinc-950/50">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-center text-[10px] font-black tracking-[0.4em] text-zinc-700 uppercase mb-16 italic">Insights from the Lab</h3>
+            <div id="medium-posts" class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-2xl mx-auto bg-zinc-900/40 p-8 md:p-12 rounded-2xl border border-zinc-900">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-black text-white uppercase tracking-tighter">Let's build <br> something <span class="text-accent">Bigger.</span></h3>
+                <p class="text-zinc-600 text-xs mt-2">Let's build your next project together.</p>
+            </div>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="Name" required class="w-full bg-black border border-zinc-800 p-4 rounded text-xs focus:border-accent outline-none transition">
+                    <input type="email" name="email" placeholder="Email" required class="w-full bg-black border border-zinc-800 p-4 rounded text-xs focus:border-accent outline-none transition">
+                </div>
+                <textarea name="message" placeholder="Project details..." required rows="4" class="w-full bg-black border border-zinc-800 p-4 rounded text-xs focus:border-accent outline-none transition"></textarea>
+                <button type="submit" class="w-full bg-accent text-white py-4 rounded font-bold uppercase text-[10px] tracking-[0.2em] hover:opacity-90 transition">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-zinc-900">
+        <p class="text-zinc-700 text-[9px] font-bold tracking-[0.3em] uppercase">
+            &copy; 2026 Bigg3rly Labs • Nigeria • Serving Worldwide
+        </p>
+    </footer>
+
+    <script>
+        // Medium Logic
+        const mediumUsername = 'YOUR_MEDIUM_USERNAME'; 
+        const feedContainer = document.getElementById('medium-posts');
+
+        fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${mediumUsername}`)
+            .then(res => res.json())
+            .then(data => {
+                const posts = data.items.slice(0, 3);
+                let html = '';
+                posts.forEach(post => {
+                    html += `
+                        <a href="${post.link}" target="_blank" class="group block">
+                            <h4 class="text-sm font-bold text-zinc-400 group-hover:text-accent transition duration-300 leading-snug uppercase">${post.title}</h4>
+                            <div class="mt-4 flex items-center space-x-2">
+                                <span class="text-[9px] font-black uppercase tracking-widest text-zinc-700 group-hover:text-zinc-500">Read Insights →</span>
+                            </div>
+                        </a>
+                    `;
+                });
+                feedContainer.innerHTML = html || '<p class="text-zinc-800 text-center text-[9px] uppercase tracking-widest col-span-full">No active posts</p>';
+            })
+            .catch(() => {
+                feedContainer.innerHTML = '<p class="text-zinc-800 text-[9px] text-center uppercase tracking-widest col-span-full">Feed offline</p>';
+            });
+    </script>
+</body>
+</html>
