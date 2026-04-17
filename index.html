@@ -38,6 +38,7 @@
                 <a href="#work" class="hover:text-accent transition">Work</a>
                 <a href="#blog" class="hover:text-accent transition">Insights</a>
                 <a href="#contact" class="hover:text-accent transition">Contact</a>
+                <a href="#team" class="hover:text-accent transition">Team</a>
             </div>
             <a href="https://wa.me/2349132720329?text=Hello%20Bigg3rly%20Labs!" 
                class="bg-accent text-white px-5 py-2 rounded text-[10px] font-black uppercase tracking-widest hover:opacity-80 transition">
@@ -73,7 +74,8 @@
                 <a href="https://asobridal.com" target="_blank" class="group block">
                     <div class="aspect-video bg-zinc-900 rounded border border-zinc-800 overflow-hidden relative group-hover:border-accent/50 transition-all duration-500">
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-2xl font-black text-zinc-800 group-hover:text-accent transition uppercase italic">AsoBridal</span>
+                            <!-- <span class="text-2xl font-black text-zinc-800 group-hover:text-accent transition uppercase italic">AsoBridal</span> -->
+                             <img src="burgerspot.png" alt="asobridal">
                         </div>
                     </div>
                     <div class="mt-4">
@@ -84,7 +86,8 @@
                 <a href="https://burgerspot.ng" target="_blank" class="group block">
                     <div class="aspect-video bg-zinc-900 rounded border border-zinc-800 overflow-hidden relative group-hover:border-accent/50 transition-all duration-500">
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-2xl font-black text-zinc-800 group-hover:text-accent transition uppercase italic">BurgerSpot</span>
+                            <!-- <span class="text-2xl font-black text-zinc-800 group-hover:text-accent transition uppercase italic">BurgerSpot</span> -->
+                             <img src="burgerspot.png" alt="burgerspot">
                         </div>
                     </div>
                     <div class="mt-4">
@@ -100,6 +103,7 @@
         <div class="max-w-5xl mx-auto">
             <h3 class="text-center text-[10px] font-black tracking-[0.4em] text-zinc-700 uppercase mb-16 italic">Insights from the Lab</h3>
             <div id="medium-posts" class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
                 </div>
         </div>
     </section>
@@ -125,6 +129,34 @@
         </div>
     </section>
 
+    <section id="team" class="py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+        <h3 class="text-center text-2xl font-black text-white uppercase tracking-tighter mb-12">The <span class="text-accent">Team</span></h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <img src="https://bigg3rlylabs.com.ng/alaska.jpg" alt="Member" class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-zinc-800 mb-3">
+                <h4 class="text-white text-xs font-bold">Alaska</h4>
+                <p class="text-zinc-600 text-[9px]">Senior Dev</p>
+            </div>
+            <div>
+                <img src="https://bigg3rlylabs.com.ng/basilia.jpg" alt="Member" class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-zinc-800 mb-3">
+                <h4 class="text-white text-xs font-bold">Basilia</h4>
+                <p class="text-zinc-600 text-[9px]">junior Dev</p>
+            </div>
+            <div>
+                <img src="https://bigg3rlylabs.com.ng/esther.jpg" alt="Member" class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-zinc-800 mb-3">
+                <h4 class="text-white text-xs font-bold">Esther</h4>
+                <p class="text-zinc-600 text-[9px]">Client Relations Manager</p>
+            </div>
+            <div>
+                <img src="https://bigg3rlylabs.com.ng/bigg3rly.jpg" alt="Member" class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-zinc-800 mb-3">
+                <h4 class="text-white text-xs font-bold">Bigg3rly</h4>
+                <p class="text-zinc-600 text-[9px]">Dev</p>
+            </div>
+        </div>
+    </div>
+</section>
+
     <footer class="py-12 text-center border-t border-zinc-900">
         <p class="text-zinc-700 text-[9px] font-bold tracking-[0.3em] uppercase">
             &copy; 2026 Bigg3rly Labs • Nigeria • Serving Worldwide
@@ -133,7 +165,7 @@
 
     <script>
         // Medium Logic
-        const mediumUsername = 'YOUR_MEDIUM_USERNAME'; 
+        const mediumUsername = 'kvngdexmond'; 
         const feedContainer = document.getElementById('medium-posts');
 
         fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${mediumUsername}`)
