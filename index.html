@@ -3,190 +3,722 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bigg3rly Labs | Software Development House</title>
+
+    <!-- PRIMARY SEO -->
+    <title>Bigg3rly Labs | Software Development House in Nigeria</title>
+    <meta name="description" content="Bigg3rly Labs is a Nigeria-based software house specializing in UI/UX design and full-stack web development for local and international clients. We build fast, scalable, beautiful digital products.">
+    <meta name="keywords" content="software development Nigeria, web development Nigeria, UI UX design Nigeria, full stack developer Nigeria, Port Harcourt developer, Lagos developer, Nigerian tech company, website design Nigeria">
+    <meta name="author" content="Bigg3rly Labs">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bigg3rlylabs.com.ng/">
+
+    <!-- OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bigg3rlylabs.com.ng/">
+    <meta property="og:title" content="Bigg3rly Labs | Software Development House in Nigeria">
+    <meta property="og:description" content="Nigeria-based software house building UI/UX and full-stack solutions for innovators worldwide. Think Bigg3r. Build Better.">
+    <meta property="og:image" content="https://bigg3rlylabs.com.ng/og-image.png">
+    <meta property="og:site_name" content="Bigg3rly Labs">
+    <meta property="og:locale" content="en_NG">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://bigg3rlylabs.com.ng/">
+    <meta name="twitter:title" content="Bigg3rly Labs | Software Development House in Nigeria">
+    <meta name="twitter:description" content="Nigeria-based software house building UI/UX and full-stack solutions for innovators worldwide.">
+    <meta name="twitter:image" content="https://bigg3rlylabs.com.ng/og-image.png">
+
+    <!-- STRUCTURED DATA (Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Bigg3rly Labs",
+      "url": "https://bigg3rlylabs.com.ng",
+      "logo": "https://bigg3rlylabs.com.ng/hero-bg.png",
+      "description": "Nigeria-based software house specializing in UI/UX design and full-stack web development.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NG"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+2349132720329",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://medium.com/@kvngdexmond",
+        "https://www.tiktok.com/@bigg3rlygroup",
+        "https://www.instagram.com/bigg3rly.dev",
+        "https://www.facebook.com/bigg3rlylabs"
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-        
-        :root { scroll-behavior: smooth; }
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #000;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+        :root {
+            --accent: #E11D48;
+            --accent2: #FF6B35;
+            scroll-behavior: smooth;
         }
 
-        .text-accent { color: #E11D48; }
-        .bg-accent { background-color: #E11D48; }
-        .glass { background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: #E11D48; }
+        * { box-sizing: border-box; }
 
-        /* Responsive typography fixes */
-        .hero-title { font-size: clamp(2.5rem, 8vw, 6.5rem); }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #050505;
+            overflow-x: hidden;
+            color: #a1a1aa;
+        }
+
+        h1, h2, h3, h4, .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: var(--accent); }
+
+        .text-accent { color: var(--accent); }
+        .bg-accent { background-color: var(--accent); }
+        .border-accent { border-color: var(--accent); }
+        .glass { background: rgba(0,0,0,0.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+
+        /* NOISE TEXTURE */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.4;
+        }
+
+        /* HERO */
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(4rem, 13vw, 11rem);
+            line-height: 0.88;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: end;
+        }
+
+        /* MARQUEE */
+        .marquee-wrap { overflow: hidden; border-top: 1px solid #18181b; border-bottom: 1px solid #18181b; }
+        .marquee-inner { display: flex; gap: 4rem; white-space: nowrap; animation: marquee 22s linear infinite; }
+        .marquee-inner span { font-family: 'Bebas Neue', sans-serif; font-size: 0.85rem; letter-spacing: 0.3em; color: #27272a; padding: 0.9rem 0; }
+        .marquee-inner span.highlight { color: var(--accent); }
+        @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        /* CARDS */
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            background: #0c0c0c;
+            border: 1px solid #18181b;
+            border-radius: 4px;
+            transition: border-color 0.4s, transform 0.4s;
+        }
+        .project-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+        .project-card .overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+            opacity: 0; transition: opacity 0.4s;
+        }
+        .project-card:hover .overlay { opacity: 1; }
+
+        /* SERVICES */
+        .service-item {
+            border-bottom: 1px solid #18181b;
+            padding: 1.8rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: padding-left 0.3s;
+            cursor: default;
+        }
+        .service-item:hover { padding-left: 1rem; }
+        .service-item:hover .service-num { color: var(--accent); }
+        .service-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: #27272a; transition: color 0.3s; min-width: 3.5rem; }
+        .service-tag { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: #3f3f46; border: 1px solid #27272a; padding: 3px 10px; border-radius: 20px; }
+
+        /* STATS */
+        .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 6vw, 4.5rem); color: white; line-height: 1; }
+
+        /* TEAM */
+        .team-card {
+            text-align: center;
+            position: relative;
+        }
+        .team-card img {
+            width: 9rem; height: 9rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #18181b;
+            transition: border-color 0.3s, transform 0.3s;
+            filter: grayscale(30%);
+        }
+        .team-card:hover img { border-color: var(--accent); transform: scale(1.05); filter: grayscale(0%); }
+        .team-role { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: #3f3f46; }
+
+        /* FORM */
+        .form-input {
+            width: 100%;
+            background: #0c0c0c;
+            border: 1px solid #18181b;
+            padding: 1rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: #e4e4e7;
+            outline: none;
+            transition: border-color 0.3s;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .form-input:focus { border-color: var(--accent); }
+        .form-input::placeholder { color: #3f3f46; }
+
+        /* FAQ */
+        .faq-item { border-bottom: 1px solid #18181b; }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; cursor: pointer; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; font-size: 0.8rem; line-height: 1.8; color: #52525b; }
+        .faq-item.open .faq-answer { max-height: 200px; padding-bottom: 1rem; }
+        .faq-icon { transition: transform 0.3s; color: #3f3f46; font-size: 0.7rem; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--accent); }
+
+        /* PROCESS */
+        .process-step { display: flex; gap: 1.5rem; align-items: flex-start; }
+        .step-line { display: flex; flex-direction: column; align-items: center; }
+        .step-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 5px; }
+        .step-connector { width: 1px; flex: 1; background: #18181b; min-height: 40px; }
+
+        /* FLOATING CTA */
+        .float-cta {
+            position: fixed; bottom: 2rem; right: 2rem; z-index: 100;
+            background: var(--accent);
+            color: white;
+            width: 52px; height: 52px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 0 0 0 rgba(225,29,72,0.5);
+            animation: pulse 2.5s infinite;
+            transition: transform 0.2s;
+        }
+        .float-cta:hover { transform: scale(1.1); }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(225,29,72,0.5); }
+            70% { box-shadow: 0 0 0 14px rgba(225,29,72,0); }
+            100% { box-shadow: 0 0 0 0 rgba(225,29,72,0); }
+        }
+
+        /* FADE IN on scroll */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: none; }
+
+        /* NAV link underline */
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+
+        /* MOBILE nav */
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: flex; }
     </style>
 </head>
-<body class="text-zinc-300 antialiased">
+<body>
 
-    <nav class="fixed top-0 w-full z-50 glass border-b border-zinc-900">
+    <!-- FLOATING WHATSAPP CTA -->
+    <div class="float-cta-wrap" style="position:fixed;bottom:2rem;right:2rem;z-index:100;display:flex;flex-direction:column;align-items:flex-end;gap:10px;">
+        <div id="wa-options" style="display:none;flex-direction:column;gap:8px;align-items:flex-end;">
+            <a href="https://wa.me/2349132720329?text=Hello%20Bigg3rly%20Labs!" target="_blank" rel="noopener" style="background:#111;border:1px solid #27272a;color:#e4e4e7;padding:8px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;white-space:nowrap;text-decoration:none;" onmouseover="this.style.borderColor='#e11d48'" onmouseout="this.style.borderColor='#27272a'">General Enquiries</a>
+            <a href="https://wa.me/2348150916380?text=Hello%20I%20need%20support!" target="_blank" rel="noopener" style="background:#111;border:1px solid #27272a;color:#e4e4e7;padding:8px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;white-space:nowrap;text-decoration:none;" onmouseover="this.style.borderColor='#e11d48'" onmouseout="this.style.borderColor='#27272a'">Client Manager</a>
+        </div>
+        <button onclick="var o=document.getElementById('wa-options');o.style.display=o.style.display==='none'?'flex':'none'" class="float-cta" aria-label="Chat on WhatsApp" style="position:static;">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-zinc-900" role="navigation" aria-label="Main navigation">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-black tracking-tighter text-white uppercase">BIGG3RLY<span class="text-accent">LABS</span></h1>
-            <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em]">
-                <a href="#work" class="hover:text-accent transition">Work</a>
-                <a href="#blog" class="hover:text-accent transition">Insights</a>
-                <a href="#contact" class="hover:text-accent transition">Contact</a>
-                <a href="#team" class="hover:text-accent transition">Team</a>
-            </div>
-            <a href="https://wa.me/2349132720329?text=Hello%20Bigg3rly%20Labs!" 
-               class="bg-accent text-white px-5 py-2 rounded text-[10px] font-black uppercase tracking-widest hover:opacity-80 transition">
-               Quote
+            <a href="/" aria-label="Bigg3rly Labs Home">
+                <h1 class="text-xl font-black tracking-tighter text-white uppercase" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.05em;font-size:1.4rem;">
+                    BIGG3RLY<span class="text-accent">LABS</span>
+                </h1>
             </a>
+            <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em]">
+                <a href="#services" class="nav-link hover:text-white transition">Services</a>
+                <a href="#work" class="nav-link hover:text-white transition">Work</a>
+                <a href="#blog" class="nav-link hover:text-white transition">Insights</a>
+                <a href="#team" class="nav-link hover:text-white transition">Team</a>
+                <a href="#contact" class="nav-link hover:text-white transition">Contact</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/2349132720329?text=Hello%20Bigg3rly%20Labs!"
+                   class="bg-accent text-white px-5 py-2 rounded text-[10px] font-black uppercase tracking-widest hover:opacity-80 transition hidden md:block">
+                   Get a Quote
+                </a>
+                <button id="nav-toggle" class="md:hidden text-zinc-400 hover:text-white" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="flex-col px-6 pb-4 gap-4 text-[11px] font-bold uppercase tracking-widest border-t border-zinc-900 bg-black">
+            <a href="#services" class="hover:text-accent transition py-2">Services</a>
+            <a href="#work" class="hover:text-accent transition py-2">Work</a>
+            <a href="#blog" class="hover:text-accent transition py-2">Insights</a>
+            <a href="#team" class="hover:text-accent transition py-2">Team</a>
+            <a href="#contact" class="hover:text-accent transition py-2">Contact</a>
+            <a href="https://wa.me/2349132720329?text=Hello%20Bigg3rly%20Labs!" class="bg-accent text-white px-4 py-2 rounded text-center">Get a Quote</a>
         </div>
     </nav>
 
-    <header class="relative pt-44 pb-20 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <p class="text-accent font-mono tracking-[0.4em] text-[10px] uppercase mb-6">Engineering Digital Excellence</p>
-            <h2 class="hero-title font-black mb-8 leading-[0.9] tracking-tighter text-white uppercase">
-                Think <span class="italic text-zinc-700">Bigg3r.</span><br>Build Better.
+    <!-- HERO -->
+    <header class="relative pt-40 pb-20 px-6 min-h-screen flex items-center" role="banner">
+        <div class="max-w-6xl mx-auto w-full">
+            <p class="text-accent font-mono tracking-[0.5em] text-[9px] uppercase mb-6 reveal">◆ Nigeria-Based Software House</p>
+            <h2 class="hero-title font-black mb-0 text-white uppercase reveal" style="transition-delay:0.1s">
+                Think<br><span class="text-zinc-800 italic">Bigg3r.</span>
             </h2>
-            <p class="text-zinc-500 text-sm md:text-base mb-12 max-w-xl mx-auto leading-relaxed">
-                A Nigeria-based software house specializing in UI/UX and Full-Stack solutions for local and international innovators.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mt-2 reveal" style="transition-delay:0.2s">
+                <h2 class="hero-title font-black text-white uppercase">Build Better.</h2>
+                <p class="text-zinc-500 text-sm max-w-xs leading-relaxed md:text-right mb-2">
+                    UI/UX & Full-Stack solutions for local and international innovators. We ship fast, we ship clean.
+                </p>
+            </div>
+            <div class="flex flex-wrap gap-4 mt-10 reveal" style="transition-delay:0.3s">
                 <a href="#work" class="border border-zinc-800 text-white px-8 py-3 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">Our Work</a>
                 <a href="#contact" class="bg-zinc-900 text-white px-8 py-3 rounded text-[10px] font-bold uppercase tracking-widest border border-zinc-800 hover:border-accent transition">Get in Touch</a>
+            </div>
+
+            <!-- Mini stats -->
+            <div class="grid grid-cols-3 gap-6 mt-20 pt-10 border-t border-zinc-900 reveal" style="transition-delay:0.4s">
+                <div>
+                    <div class="stat-num">10+</div>
+                    <div class="text-[9px] uppercase tracking-widest text-zinc-600 mt-1">Projects Shipped</div>
+                </div>
+                <div>
+                    <div class="stat-num">06</div>
+                    <div class="text-[9px] uppercase tracking-widest text-zinc-600 mt-1">Team Members</div>
+                </div>
+                <div>
+                    <div class="stat-num">2</div>
+                    <div class="text-[9px] uppercase tracking-widest text-zinc-600 mt-1">Years Building</div>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="work" class="py-24 px-6">
+    <!-- MARQUEE -->
+    <div class="marquee-wrap py-1" aria-hidden="true">
+        <div class="marquee-inner">
+            <span>UI / UX DESIGN</span><span class="highlight">◆</span>
+            <span>FULL STACK DEVELOPMENT</span><span class="highlight">◆</span>
+            <span>MOBILE APPS</span><span class="highlight">◆</span>
+            <span>SOCIAL MEDIA MANAGEMENT</span><span class="highlight">◆</span>
+            <span>BRAND IDENTITY</span><span class="highlight">◆</span>
+            <span>E-COMMERCE</span><span class="highlight">◆</span>
+            <span>SEO OPTIMIZATION</span><span class="highlight">◆</span>
+            <span>UI / UX DESIGN</span><span class="highlight">◆</span>
+            <span>FULL STACK DEVELOPMENT</span><span class="highlight">◆</span>
+            <span>MOBILE APPS</span><span class="highlight">◆</span>
+            <span>SOCIAL MEDIA MANAGEMENT</span><span class="highlight">◆</span>
+            <span>BRAND IDENTITY</span><span class="highlight">◆</span>
+            <span>E-COMMERCE</span><span class="highlight">◆</span>
+            <span>SEO OPTIMIZATION</span><span class="highlight">◆</span>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-28 px-6" aria-labelledby="services-heading">
         <div class="max-w-5xl mx-auto">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-                <h3 class="text-3xl font-black text-white uppercase tracking-tighter">Selected Projects</h3>
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-4 gap-4 reveal">
+                <h3 id="services-heading" class="text-5xl text-white uppercase">What We Do</h3>
+                <p class="text-zinc-600 font-mono text-[10px] tracking-widest uppercase">/ Our Core Services</p>
+            </div>
+            <div class="reveal" style="transition-delay:0.1s">
+                <div class="service-item">
+                    <div class="flex items-center gap-6">
+                        <span class="service-num">01</span>
+                        <div>
+                            <div class="text-white font-bold text-sm uppercase tracking-wider">UI / UX Design</div>
+                            <div class="text-zinc-600 text-xs mt-1">Interfaces that convert and delight — from wireframes to polished prototypes.</div>
+                        </div>
+                    </div>
+                    <span class="service-tag hidden md:block">Figma · Framer</span>
+                </div>
+                <div class="service-item">
+                    <div class="flex items-center gap-6">
+                        <span class="service-num">02</span>
+                        <div>
+                            <div class="text-white font-bold text-sm uppercase tracking-wider">Full-Stack Web Development</div>
+                            <div class="text-zinc-600 text-xs mt-1">End-to-end builds — scalable backends, fast frontends, clean code.</div>
+                        </div>
+                    </div>
+                    <span class="service-tag hidden md:block">React · Node · Firebase</span>
+                </div>
+                <div class="service-item">
+                    <div class="flex items-center gap-6">
+                        <span class="service-num">03</span>
+                        <div>
+                            <div class="text-white font-bold text-sm uppercase tracking-wider">Mobile App Development</div>
+                            <div class="text-zinc-600 text-xs mt-1">iOS & Android apps built for performance and real-world users.</div>
+                        </div>
+                    </div>
+                    <span class="service-tag hidden md:block">React Native · Flutter</span>
+                </div>
+                <div class="service-item">
+                    <div class="flex items-center gap-6">
+                        <span class="service-num">04</span>
+                        <div>
+                            <div class="text-white font-bold text-sm uppercase tracking-wider">Social Media Management</div>
+                            <div class="text-zinc-600 text-xs mt-1">Content, strategy, and growth across Instagram, X, LinkedIn and more.</div>
+                        </div>
+                    </div>
+                    <span class="service-tag hidden md:block">Strategy · Content · Ads</span>
+                </div>
+                <div class="service-item">
+                    <div class="flex items-center gap-6">
+                        <span class="service-num">05</span>
+                        <div>
+                            <div class="text-white font-bold text-sm uppercase tracking-wider">SEO & Performance</div>
+                            <div class="text-zinc-600 text-xs mt-1">Technical SEO, Core Web Vitals, and search visibility that actually lasts.</div>
+                        </div>
+                    </div>
+                    <span class="service-tag hidden md:block">Technical · On-Page · Speed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="py-20 px-6 bg-zinc-950/60" aria-labelledby="process-heading">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-16 items-start">
+                <div class="md:w-1/3 reveal">
+                    <h3 id="process-heading" class="text-5xl text-white uppercase mb-4">How We Work</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">A clear, communicative process — so you always know where your project stands.</p>
+                </div>
+                <div class="md:w-2/3 reveal" style="transition-delay:0.15s">
+                    <div class="space-y-0">
+                        <div class="process-step pb-8">
+                            <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+                            <div>
+                                <div class="text-[9px] tracking-widest uppercase text-zinc-600 mb-1">Step 01</div>
+                                <div class="text-white font-bold text-sm uppercase tracking-wide">Discovery Call</div>
+                                <div class="text-zinc-600 text-xs mt-1 leading-relaxed">We understand your goals, users, and technical constraints in a quick 30-min session.</div>
+                            </div>
+                        </div>
+                        <div class="process-step pb-8">
+                            <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+                            <div>
+                                <div class="text-[9px] tracking-widest uppercase text-zinc-600 mb-1">Step 02</div>
+                                <div class="text-white font-bold text-sm uppercase tracking-wide">Design & Prototype</div>
+                                <div class="text-zinc-600 text-xs mt-1 leading-relaxed">Wireframes and high-fidelity mockups — you approve before a single line of code is written.</div>
+                            </div>
+                        </div>
+                        <div class="process-step pb-8">
+                            <div class="step-line"><div class="step-dot"></div><div class="step-connector"></div></div>
+                            <div>
+                                <div class="text-[9px] tracking-widest uppercase text-zinc-600 mb-1">Step 03</div>
+                                <div class="text-white font-bold text-sm uppercase tracking-wide">Build & Test</div>
+                                <div class="text-zinc-600 text-xs mt-1 leading-relaxed">Agile sprints with weekly updates. Full testing before any delivery.</div>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-line"><div class="step-dot"></div></div>
+                            <div>
+                                <div class="text-[9px] tracking-widest uppercase text-zinc-600 mb-1">Step 04</div>
+                                <div class="text-white font-bold text-sm uppercase tracking-wide">Launch & Support</div>
+                                <div class="text-zinc-600 text-xs mt-1 leading-relaxed">We deploy, monitor, and provide post-launch support. You're never left hanging.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="py-28 px-6" aria-labelledby="work-heading">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4 reveal">
+                <h3 id="work-heading" class="text-5xl text-white uppercase">Selected Projects</h3>
                 <p class="text-zinc-600 font-mono text-[10px] tracking-widest uppercase">/ Delivering Scalable Code</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <a href="https://asobridal.com" target="_blank" class="group block">
-                    <div class="aspect-video bg-zinc-900 rounded border border-zinc-800 overflow-hidden relative group-hover:border-accent/50 transition-all duration-500">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <!-- <span class="text-2xl font-black text-zinc-800 group-hover:text-accent transition uppercase italic">AsoBridal</span> -->
-                             <img src="asobridal.png" alt="asobridal">
+            <!-- PROJECT CAROUSEL -->
+            <div class="relative reveal" style="transition-delay:0.1s">
+                <div id="proj-track" class="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth" style="scrollbar-width:none">
+                    <a href="https://asobridal.com" target="_blank" rel="noopener" class="project-card group block flex-shrink-0 w-72 md:w-80 snap-start" aria-label="Visit AsosBridal website">
+                        <div class="aspect-video overflow-hidden relative">
+                            <img src="asobridal.png" alt="AsosBridal Bridal Boutique built by Bigg3rly Labs" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" loading="lazy">
+                            <div class="overlay"></div>
+                            <div class="absolute bottom-0 left-0 p-4 opacity-0 group-hover:opacity-100 transition duration-300"><span class="text-[9px] uppercase tracking-widest text-accent font-bold">Visit Site</span></div>
                         </div>
-                    </div>
-                    <div class="mt-4">
-                        <h4 class="text-white text-xs font-bold uppercase tracking-widest">asobridal.com</h4>
-                        <p class="text-zinc-600 text-[10px] uppercase mt-1">Bridal Boutique (Online)</p>
-                    </div>
-                </a>
-                <a href="https://burgerspot.ng" target="_blank" class="group block">
-                    <div class="aspect-video bg-zinc-900 rounded border border-zinc-800 overflow-hidden relative group-hover:border-accent/50 transition-all duration-500">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <!-- <span class="text-2xl font-black text-zinc-800 group-hover:text-accent transition uppercase italic">BurgerSpot</span> -->
-                             <img src="burgerspot.png" alt="burgerspot">
+                        <div class="p-4"><h4 class="text-white text-xs font-bold uppercase tracking-widest">asobridal.com</h4><p class="text-zinc-600 text-[10px] uppercase mt-1">Bridal Boutique &bull; E-Commerce</p></div>
+                    </a>
+                    <a href="https://burgerspot.ng" target="_blank" rel="noopener" class="project-card group block flex-shrink-0 w-72 md:w-80 snap-start" aria-label="Visit BurgerSpot website">
+                        <div class="aspect-video overflow-hidden relative">
+                            <img src="burgerspot.png" alt="BurgerSpot Food Delivery Platform built by Bigg3rly Labs" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" loading="lazy">
+                            <div class="overlay"></div>
+                            <div class="absolute bottom-0 left-0 p-4 opacity-0 group-hover:opacity-100 transition duration-300"><span class="text-[9px] uppercase tracking-widest text-accent font-bold">Visit Site</span></div>
                         </div>
-                    </div>
-                    <div class="mt-4">
-                        <h4 class="text-white text-xs font-bold uppercase tracking-widest">burgerspot.ng</h4>
-                        <p class="text-zinc-600 text-[10px] uppercase mt-1">Food Order/Delivery Platform</p>
-                    </div>
-                </a>
+                        <div class="p-4"><h4 class="text-white text-xs font-bold uppercase tracking-widest">burgerspot.ng</h4><p class="text-zinc-600 text-[10px] uppercase mt-1">Food Delivery &bull; Web App</p></div>
+                    </a>
+                    <a href="https://peaceoversea.com.ng" target="_blank" rel="noopener" class="project-card group block flex-shrink-0 w-72 md:w-80 snap-start" aria-label="Visit Peace Oversea website">
+                        <div class="aspect-video overflow-hidden relative bg-zinc-900 flex items-center justify-center">
+                            <span class="text-zinc-700 font-black uppercase tracking-widest text-xs group-hover:text-accent transition">peaceoversea.com.ng</span>
+                            <div class="overlay"></div>
+                            <div class="absolute bottom-0 left-0 p-4 opacity-0 group-hover:opacity-100 transition duration-300"><span class="text-[9px] uppercase tracking-widest text-accent font-bold">Visit Site</span></div>
+                        </div>
+                        <div class="p-4"><h4 class="text-white text-xs font-bold uppercase tracking-widest">peaceoversea.com.ng</h4><p class="text-zinc-600 text-[10px] uppercase mt-1">Overseas Services &bull; Landing Page</p></div>
+                    </a>
+                    <a href="https://pamischools.com.ng" target="_blank" rel="noopener" class="project-card group block flex-shrink-0 w-72 md:w-80 snap-start" aria-label="Visit Pami Schools website">
+                        <div class="aspect-video overflow-hidden relative bg-zinc-900 flex items-center justify-center">
+                            <span class="text-zinc-700 font-black uppercase tracking-widest text-xs group-hover:text-accent transition">pamischools.com.ng</span>
+                            <div class="overlay"></div>
+                            <div class="absolute bottom-0 left-0 p-4 opacity-0 group-hover:opacity-100 transition duration-300"><span class="text-[9px] uppercase tracking-widest text-accent font-bold">Visit Site</span></div>
+                        </div>
+                        <div class="p-4"><h4 class="text-white text-xs font-bold uppercase tracking-widest">pamischools.com.ng</h4><p class="text-zinc-600 text-[10px] uppercase mt-1">Education &bull; School Website</p></div>
+                    </a>
+                    <a href="https://1316onlinestore.com.ng" target="_blank" rel="noopener" class="project-card group block flex-shrink-0 w-72 md:w-80 snap-start" aria-label="Visit 1316 Online Store website">
+                        <div class="aspect-video overflow-hidden relative bg-zinc-900 flex items-center justify-center">
+                            <span class="text-zinc-700 font-black uppercase tracking-widest text-xs group-hover:text-accent transition">1316onlinestore.com.ng</span>
+                            <div class="overlay"></div>
+                            <div class="absolute bottom-0 left-0 p-4 opacity-0 group-hover:opacity-100 transition duration-300"><span class="text-[9px] uppercase tracking-widest text-accent font-bold">Visit Site</span></div>
+                        </div>
+                        <div class="p-4"><h4 class="text-white text-xs font-bold uppercase tracking-widest">1316onlinestore.com.ng</h4><p class="text-zinc-600 text-[10px] uppercase mt-1">Online Store &bull; E-Commerce</p></div>
+                    </a>
+                    <a href="https://kampalahomemadeayurvedaclinic.com" target="_blank" rel="noopener" class="project-card group block flex-shrink-0 w-72 md:w-80 snap-start" aria-label="Visit Kampala Ayurveda Clinic website">
+                        <div class="aspect-video overflow-hidden relative bg-zinc-900 flex items-center justify-center">
+                            <span class="text-zinc-700 font-black uppercase tracking-widest text-[10px] group-hover:text-accent transition text-center px-3">kampalahomemadeayurvedaclinic.com</span>
+                            <div class="overlay"></div>
+                            <div class="absolute bottom-0 left-0 p-4 opacity-0 group-hover:opacity-100 transition duration-300"><span class="text-[9px] uppercase tracking-widest text-accent font-bold">Visit Site</span></div>
+                        </div>
+                        <div class="p-4"><h4 class="text-white text-xs font-bold uppercase tracking-widest">kampalahomemadeayurvedaclinic.com</h4><p class="text-zinc-600 text-[10px] uppercase mt-1">Health Clinic &bull; International</p></div>
+                    </a>
+                </div>
+                <!-- Carousel controls -->
+                <div class="flex items-center gap-4 mt-6">
+                    <button id="proj-prev" onclick="document.getElementById('proj-track').scrollBy({left:-320,behavior:'smooth'})" class="border border-zinc-800 text-zinc-500 hover:border-accent hover:text-accent transition w-9 h-9 flex items-center justify-center rounded text-xs" aria-label="Previous project">&#8592;</button>
+                    <button id="proj-next" onclick="document.getElementById('proj-track').scrollBy({left:320,behavior:'smooth'})" class="border border-zinc-800 text-zinc-500 hover:border-accent hover:text-accent transition w-9 h-9 flex items-center justify-center rounded text-xs" aria-label="Next project">&#8594;</button>
+                    <span class="text-zinc-700 text-[9px] uppercase tracking-widest ml-2">Drag or tap to scroll &bull; 6 projects</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="blog" class="py-24 px-6 bg-zinc-950/50">
+    <!-- BLOG -->
+    <section id="blog" class="py-24 px-6 bg-zinc-950/50" aria-labelledby="blog-heading">
         <div class="max-w-5xl mx-auto">
-            <h3 class="text-center text-[10px] font-black tracking-[0.4em] text-zinc-700 uppercase mb-16 italic">Insights from the Lab</h3>
-            <div id="medium-posts" class="grid grid-cols-1 md:grid-cols-3 gap-12">
-
-                </div>
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 reveal">
+                <h3 id="blog-heading" class="text-5xl text-white uppercase">Insights from the Lab</h3>
+                <a href="https://medium.com/@kvngdexmond" target="_blank" rel="noopener" class="text-[9px] font-bold uppercase tracking-widest text-zinc-600 hover:text-accent transition">All Articles →</a>
+            </div>
+            <div id="medium-posts" class="grid grid-cols-1 md:grid-cols-3 gap-10 reveal" style="transition-delay:0.1s"></div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6">
-        <div class="max-w-2xl mx-auto bg-zinc-900/40 p-8 md:p-12 rounded-2xl border border-zinc-900">
-            <div class="text-center mb-10">
-                <h3 class="text-2xl font-black text-white uppercase tracking-tighter">Let's build <br> something <span class="text-accent">Bigger.</span></h3>
-                <p class="text-zinc-600 text-xs mt-2">Let's build your next project together.</p>
+    <!-- TEAM -->
+    <section id="team" class="py-28 px-6" aria-labelledby="team-heading">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h3 id="team-heading" class="text-5xl text-white uppercase">The <span class="text-accent">Team</span></h3>
+                <p class="text-zinc-600 text-xs mt-3 uppercase tracking-widest">The humans behind every pixel and every line of code</p>
             </div>
-            
-            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <input type="text" name="name" placeholder="Name" required class="w-full bg-black border border-zinc-800 p-4 rounded text-xs focus:border-accent outline-none transition">
-                    <input type="email" name="email" placeholder="Email" required class="w-full bg-black border border-zinc-800 p-4 rounded text-xs focus:border-accent outline-none transition">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 reveal" style="transition-delay:0.1s">
+                <div class="team-card">
+                    <img src="https://bigg3rlylabs.com.ng/alaska.jpg" alt="Alaska — Senior Developer at Bigg3rly Labs" loading="lazy">
+                    <h4 class="text-white text-xs font-bold mt-3">Alaska</h4>
+                    <p class="team-role mt-1">Senior Dev</p>
                 </div>
-                <textarea name="message" placeholder="Project details..." required rows="4" class="w-full bg-black border border-zinc-800 p-4 rounded text-xs focus:border-accent outline-none transition"></textarea>
+                <div class="team-card">
+                    <img src="https://bigg3rlylabs.com.ng/basilia.jpg" alt="Basilia — Junior Developer at Bigg3rly Labs" loading="lazy">
+                    <h4 class="text-white text-xs font-bold mt-3">Basilia</h4>
+                    <p class="team-role mt-1">Junior Dev</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://bigg3rlylabs.com.ng/esther.jpg" alt="Esther — Client Relations Manager at Bigg3rly Labs" loading="lazy">
+                    <h4 class="text-white text-xs font-bold mt-3">Esther</h4>
+                    <p class="team-role mt-1">Client Relations</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://bigg3rlylabs.com.ng/bigg3rly.jpg" alt="Bigg3rly — Developer at Bigg3rly Labs" loading="lazy">
+                    <h4 class="text-white text-xs font-bold mt-3">Bigg3rly</h4>
+                    <p class="team-role mt-1">Dev</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://bigg3rlylabs.com.ng/elder.jpg" alt="Elder — Developer at Bigg3rly Labs" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Elder&background=1a1a1a&color=e11d48&size=200'">
+                    <h4 class="text-white text-xs font-bold mt-3">Elder</h4>
+                    <p class="team-role mt-1">Developer</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://bigg3rlylabs.com.ng/cyberking.jpg" alt="Cyber King — Social Media Manager at Bigg3rly Labs" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Cyber+King&background=1a1a1a&color=e11d48&size=200'">
+                    <h4 class="text-white text-xs font-bold mt-3">Cyber King</h4>
+                    <p class="team-role mt-1">Social Media Mgr</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-6 bg-zinc-950/60" aria-labelledby="faq-heading">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12 reveal">
+                <h3 id="faq-heading" class="text-5xl text-white uppercase">Common Questions</h3>
+            </div>
+            <div class="space-y-0 reveal" style="transition-delay:0.1s">
+                <div class="faq-item">
+                    <div class="faq-question" role="button" aria-expanded="false" tabindex="0">
+                        <span class="text-zinc-300 text-sm font-bold uppercase tracking-wide">How long does a project take?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">Simple landing pages take 1–2 weeks. Full web apps typically range from 4–10 weeks depending on complexity. We'll give you a clear timeline after the discovery call.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" aria-expanded="false" tabindex="0">
+                        <span class="text-zinc-300 text-sm font-bold uppercase tracking-wide">Do you work with international clients?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">Yes! We work with clients across the UK, US, Canada, and beyond. Communication is fully remote via WhatsApp, Slack, or email — whatever works for you.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" aria-expanded="false" tabindex="0">
+                        <span class="text-zinc-300 text-sm font-bold uppercase tracking-wide">What's your payment structure?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">We typically work on a 50% upfront, 50% on delivery model. For larger projects we can split into milestones. We accept NGN and USD.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" aria-expanded="false" tabindex="0">
+                        <span class="text-zinc-300 text-sm font-bold uppercase tracking-wide">Do you offer post-launch support?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">Yes — all projects include a 30-day post-launch support window. We also offer monthly maintenance retainers for clients who need ongoing updates.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" aria-expanded="false" tabindex="0">
+                        <span class="text-zinc-300 text-sm font-bold uppercase tracking-wide">Can you redesign my existing website?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">Absolutely. Redesigns are one of our specialties — we audit your current site, identify weak points, and rebuild with a modern, performance-first approach.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-28 px-6" aria-labelledby="contact-heading">
+        <div class="max-w-2xl mx-auto reveal">
+            <div class="text-center mb-10">
+                <h3 id="contact-heading" class="text-5xl text-white uppercase">Let's Build <span class="text-accent">Bigger.</span></h3>
+                <p class="text-zinc-600 text-xs mt-2 uppercase tracking-widest">Tell us about your project</p>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4" novalidate>
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+                <input type="hidden" name="subject" value="New Project Inquiry — Bigg3rly Labs">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="Your Name" required class="form-input" aria-label="Your name">
+                    <input type="email" name="email" placeholder="Email Address" required class="form-input" aria-label="Email address">
+                </div>
+                <select name="service" class="form-input" aria-label="Service needed">
+                    <option value="" disabled selected>Service Needed</option>
+                    <option value="ui-ux">UI / UX Design</option>
+                    <option value="fullstack">Full-Stack Development</option>
+                    <option value="mobile">Mobile App</option>
+                    <option value="social">Social Media Management</option>
+                    <option value="seo">SEO & Performance</option>
+                    <option value="other">Other / Not Sure</option>
+                </select>
+                <textarea name="message" placeholder="Tell us about your project..." required rows="4" class="form-input" aria-label="Project details"></textarea>
                 <button type="submit" class="w-full bg-accent text-white py-4 rounded font-bold uppercase text-[10px] tracking-[0.2em] hover:opacity-90 transition">
-                    Send Message
+                    Send Message <i class="fas fa-arrow-right ml-2"></i>
                 </button>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mt-2">
+                    <a href="https://wa.me/2349132720329?text=Hello%20Bigg3rly%20Labs!" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 border border-zinc-800 hover:border-accent text-zinc-500 hover:text-white transition px-5 py-3 rounded text-[10px] uppercase tracking-widest font-bold">
+                        <i class="fab fa-whatsapp text-accent"></i> General Enquiries
+                    </a>
+                    <a href="https://wa.me/2348150916380?text=Hello%2C%20I%20need%20support%20from%20Bigg3rly%20Labs!" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 border border-zinc-800 hover:border-accent text-zinc-500 hover:text-white transition px-5 py-3 rounded text-[10px] uppercase tracking-widest font-bold">
+                        <i class="fab fa-whatsapp text-accent"></i> Client Manager
+                    </a>
+                </div>
             </form>
         </div>
     </section>
 
-    <section id="team" class="py-24 px-6">
-    <div class="max-w-5xl mx-auto">
-        <h3 class="text-center text-2xl font-black text-white uppercase tracking-tighter mb-12">The <span class="text-accent">Team</span></h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <img src="https://bigg3rlylabs.com.ng/alaska.jpg" alt="Member" class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-zinc-800 mb-3">
-                <h4 class="text-white text-xs font-bold">Alaska</h4>
-                <p class="text-zinc-600 text-[9px]">Senior Dev</p>
-            </div>
-            <div>
-                <img src="https://bigg3rlylabs.com.ng/basilia.jpg" alt="Member" class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-zinc-800 mb-3">
-                <h4 class="text-white text-xs font-bold">Basilia</h4>
-                <p class="text-zinc-600 text-[9px]">junior Dev</p>
-            </div>
-            <div>
-                <img src="https://bigg3rlylabs.com.ng/esther.jpg" alt="Member" class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-zinc-800 mb-3">
-                <h4 class="text-white text-xs font-bold">Esther</h4>
-                <p class="text-zinc-600 text-[9px]">Client Relations Manager</p>
-            </div>
-            <div>
-                <img src="https://bigg3rlylabs.com.ng/bigg3rly.jpg" alt="Member" class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-zinc-800 mb-3">
-                <h4 class="text-white text-xs font-bold">Bigg3rly</h4>
-                <p class="text-zinc-600 text-[9px]">Dev</p>
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-zinc-900 px-6" role="contentinfo">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <span style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.08em;" class="text-zinc-700 text-lg">BIGG3RLY<span class="text-accent">LABS</span></span>
+            <p class="text-zinc-700 text-[9px] font-bold tracking-[0.3em] uppercase">
+                &copy; 2026 Bigg3rly Labs &bull; Nigeria &bull; Serving Worldwide
+            </p>
+            <div class="flex gap-5 flex-wrap justify-center">
+                <a href="https://wa.me/2349132720329" target="_blank" rel="noopener" aria-label="WhatsApp" class="text-zinc-700 hover:text-accent transition text-sm"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/bigg3rly.dev" target="_blank" rel="noopener" aria-label="Instagram" class="text-zinc-700 hover:text-accent transition text-sm"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@bigg3rlygroup" target="_blank" rel="noopener" aria-label="TikTok" class="text-zinc-700 hover:text-accent transition text-sm"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/bigg3rlylabs" target="_blank" rel="noopener" aria-label="Facebook" class="text-zinc-700 hover:text-accent transition text-sm"><i class="fab fa-facebook"></i></a>
+                <a href="https://medium.com/@kvngdexmond" target="_blank" rel="noopener" aria-label="Medium Blog" class="text-zinc-700 hover:text-accent transition text-sm"><i class="fab fa-medium"></i></a>
+                <a href="mailto:hello@bigg3rlylabs.com.ng" aria-label="Email us" class="text-zinc-700 hover:text-accent transition text-sm"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
-    </div>
-</section>
-
-    <footer class="py-12 text-center border-t border-zinc-900">
-        <p class="text-zinc-700 text-[9px] font-bold tracking-[0.3em] uppercase">
-            &copy; 2026 Bigg3rly Labs • Nigeria • Serving Worldwide
-        </p>
     </footer>
 
     <script>
-        // Medium Logic
-        const mediumUsername = 'kvngdexmond'; 
-        const feedContainer = document.getElementById('medium-posts');
+        // Mobile nav toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        navToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
 
-        fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${mediumUsername}`)
-            .then(res => res.json())
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        reveals.forEach(r => observer.observe(r));
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const wasOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!wasOpen) item.classList.add('open');
+            });
+            q.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); } });
+        });
+
+        // Medium blog feed
+        const feedContainer = document.getElementById('medium-posts');
+        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@kvngdexmond')
+            .then(r => r.json())
             .then(data => {
                 const posts = data.items.slice(0, 3);
-                let html = '';
-                posts.forEach(post => {
-                    html += `
-                        <a href="${post.link}" target="_blank" class="group block">
-                            <h4 class="text-sm font-bold text-zinc-400 group-hover:text-accent transition duration-300 leading-snug uppercase">${post.title}</h4>
-                            <div class="mt-4 flex items-center space-x-2">
-                                <span class="text-[9px] font-black uppercase tracking-widest text-zinc-700 group-hover:text-zinc-500">Read Insights →</span>
-                            </div>
-                        </a>
-                    `;
-                });
-                feedContainer.innerHTML = html || '<p class="text-zinc-800 text-center text-[9px] uppercase tracking-widest col-span-full">No active posts</p>';
+                if (!posts.length) throw new Error();
+                feedContainer.innerHTML = posts.map(post => `
+                    <a href="${post.link}" target="_blank" rel="noopener" class="group block border-b border-zinc-900 pb-8" aria-label="Read article: ${post.title}">
+                        <div class="text-[9px] uppercase tracking-widest text-zinc-700 mb-3">${new Date(post.pubDate).toLocaleDateString('en-GB', {day:'2-digit',month:'short',year:'numeric'})}</div>
+                        <h4 class="text-sm font-bold text-zinc-400 group-hover:text-accent transition duration-300 leading-snug uppercase">${post.title}</h4>
+                        <div class="mt-4 flex items-center space-x-2">
+                            <span class="text-[9px] font-black uppercase tracking-widest text-zinc-700 group-hover:text-zinc-500 transition">Read Article →</span>
+                        </div>
+                    </a>`).join('');
             })
             .catch(() => {
-                feedContainer.innerHTML = '<p class="text-zinc-800 text-[9px] text-center uppercase tracking-widest col-span-full">Feed offline</p>';
+                feedContainer.innerHTML = '<p class="text-zinc-800 text-center text-[9px] uppercase tracking-widest col-span-full">Feed offline</p>';
             });
     </script>
 </body>
